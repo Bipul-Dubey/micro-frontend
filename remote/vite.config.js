@@ -7,9 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "host",
-      remotes: {
-        remoteApp: "http://localhost:5002/assets/remoteEntry.js",
+      name: "remote_app",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Counter": "./src/counter",
       },
       shared: ["react", "react-dom"],
     }),

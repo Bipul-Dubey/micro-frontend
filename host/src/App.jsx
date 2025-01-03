@@ -1,3 +1,5 @@
+import Counter from "remoteApp/counter";
+
 function App() {
   const containerStyle = {
     height: "100vh",
@@ -21,24 +23,26 @@ function App() {
     animation: "float 6s ease-in-out infinite",
   };
 
-  const glowCircleStyle = (size, top, left, color) => ({
-    position: "absolute",
-    width: size,
-    height: size,
-    top: top,
-    left: left,
-    background: color,
-    filter: "blur(100px)",
-    borderRadius: "50%",
-    opacity: 0.7,
-  });
+  // const glowCircleStyle = (size, top, left, color) => ({
+  //   position: "absolute",
+  //   width: size,
+  //   height: size,
+  //   top: top,
+  //   left: left,
+  //   background: color,
+  //   filter: "blur(100px)",
+  //   borderRadius: "50%",
+  //   opacity: 0.7,
+  // });
 
   return (
     <div style={containerStyle}>
-      <div style={glowCircleStyle("400px", "-10%", "30%", "#ff6ec7")}></div>
+      {/* <div style={glowCircleStyle("400px", "-10%", "30%", "#ff6ec7")}></div>
       <div style={glowCircleStyle("300px", "70%", "-10%", "#34ace0")}></div>
       <div style={glowCircleStyle("500px", "50%", "80%", "#ff793f")}></div>
+      */}
       <div style={textStyle}>Host</div>
+      <Counter />
     </div>
   );
 }

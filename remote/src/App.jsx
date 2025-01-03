@@ -1,4 +1,4 @@
-export default function Home() {
+function App() {
   const containerStyle = {
     height: "100vh",
     margin: 0,
@@ -42,3 +42,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default App;
